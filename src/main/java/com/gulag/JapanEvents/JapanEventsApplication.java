@@ -1,4 +1,4 @@
-package com.gulag.JapanEvents;
+package com.gulag.japanevents;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
