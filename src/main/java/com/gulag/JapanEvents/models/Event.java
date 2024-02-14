@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,6 +34,11 @@ public class Event {
     private String time;
 
     private String date;
+    
+    @ManyToOne
+    @JoinColumn(name = "types_id", referencedColumnName = "id_types")
+    private TypesEvent typeEvent;
+
 
     public Event() {
     }
@@ -100,9 +107,12 @@ public class Event {
         this.date = date;
     }
 
-    
+    public TypesEvent getTypeEvent() {
+        return typeEvent;
+    }
 
-    
+    public void setTypeEvent(TypesEvent typeEvent) {
+        this.typeEvent = typeEvent;
+    }    
 
-    
 }
