@@ -15,7 +15,7 @@ import com.gulag.JapanEvents.models.Event;
 import com.gulag.JapanEvents.services.EventService;
 
 @RestController
-@RequestMapping(path = "/{api-endpoint}/allevents")
+@RequestMapping(path = "${api-endpoint}/allevents")
 public class EventController {
     
     EventService service;

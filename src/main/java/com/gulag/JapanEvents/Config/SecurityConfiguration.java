@@ -32,9 +32,10 @@ public class SecurityConfiguration {
                 .formLogin(form -> form.disable())
                 .logout(out -> out
                         .logoutUrl(endpoint + "/logout")
-                        .deleteCookies("JSSESIONID"))
+                        .deleteCookies("JSESSIONID"))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.GET, endpoint + "/events").permitAll())
+                        .requestMatchers(HttpMethod.GET, endpoint + "/events").permitAll()
+                        .requestMatchers(HttpMethod.GET, endpoint + "/allevents").permitAll())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED));
         
