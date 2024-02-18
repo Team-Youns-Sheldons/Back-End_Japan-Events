@@ -47,8 +47,7 @@ public class SecurityConfiguration {
                         .logoutUrl(endpoint + "/logout")
                         .deleteCookies("JSESSIONID"))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**"))
-                        .permitAll()
+                        .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
                         .requestMatchers(HttpMethod.GET, endpoint + "/login").hasAnyRole("USER", "ADMIN")
                         .requestMatchers(HttpMethod.POST, endpoint + "/events").hasRole("ADMIN")
                         .requestMatchers(endpoint + "/users").hasRole("ADMIN")
@@ -85,7 +84,7 @@ public class SecurityConfiguration {
 
         UserDetails nico = User.builder()
                 .username("nico")
-                .password("mola") // password
+                .password("mola")
                 .roles("ADMIN")
                 .build();
         Collection<UserDetails> users = new ArrayList<>();
