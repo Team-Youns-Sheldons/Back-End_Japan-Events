@@ -1,11 +1,12 @@
-package com.gulag.japanevents.services;
+package com.gulag.JapanEvents.services;
 
 import java.util.List;
 
-import com.gulag.japanevents.models.User;
-import com.gulag.japanevents.repositories.UserRepository;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
+
+import com.gulag.JapanEvents.models.User;
+import com.gulag.JapanEvents.repositories.UserRepository;
 
 @Service
 public class UserService {

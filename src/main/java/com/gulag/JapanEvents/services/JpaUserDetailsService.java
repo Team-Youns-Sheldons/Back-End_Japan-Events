@@ -1,11 +1,12 @@
-package com.gulag.japanevents.services;
+package com.gulag.JapanEvents.services;
 
-import com.gulag.japanevents.models.SecurityUser;
-import com.gulag.japanevents.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import com.gulag.JapanEvents.models.SecurityUser;
+import com.gulag.JapanEvents.repositories.UserRepository;
 
 @Service
 public class JpaUserDetailsService implements UserDetailsService {

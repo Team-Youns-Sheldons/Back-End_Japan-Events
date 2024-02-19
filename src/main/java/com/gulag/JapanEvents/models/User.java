@@ -1,4 +1,4 @@
-package com.gulag.japanevents.models;
+package com.gulag.JapanEvents.models;
 
 import java.util.Set;
 

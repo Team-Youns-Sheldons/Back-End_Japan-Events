@@ -1,4 +1,4 @@
-package com.gulag.japanevents.config;
+package com.gulag.JapanEvents.Config;
 
 import java.util.HashMap;
 import java.util.Map;
