@@ -10,7 +10,7 @@ import com.gulag.JapanEvents.models.TypesEvent;
 import com.gulag.JapanEvents.services.TypesEventService;
 
 @RestController
-@RequestMapping(path = "/{api-endpoint}/events")
+@RequestMapping(path = "${api-endpoint}/events")
 public class TypesEventController {
     
     TypesEventService service;
