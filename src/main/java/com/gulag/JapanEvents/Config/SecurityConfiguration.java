@@ -34,7 +34,8 @@ public class SecurityConfiguration {
                         .logoutUrl(endpoint + "/logout")
                         .deleteCookies("JSSESIONID"))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.GET, endpoint + "/events").permitAll())
+                        .requestMatchers(HttpMethod.GET, endpoint + "/events").permitAll()
+                        .requestMatchers(HttpMethod.GET, endpoint + "/allevents").permitAll())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED));
         
