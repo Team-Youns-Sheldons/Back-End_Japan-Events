@@ -1,3 +1,13 @@
+INSERT INTO roles (id_role, name) VALUES (default, 'ROLE_ADMIN');
+INSERT INTO roles (id_role, name) VALUES (default, 'ROLE_USER');
+
+
+INSERT INTO users (id_user, username, password) VALUES (default, 'juanito', '$2a$12$8LegtLQWe717tIPvZeivjuqKnaAs5.bm0Q05.5GrAmcKzXw2NjoUO');
+INSERT INTO users (id_user, username, password) VALUES (default, 'nicolasito', '$2a$12$8LegtLQWe717tIPvZeivjuqKnaAs5.bm0Q05.5GrAmcKzXw2NjoUO');
+
+INSERT INTO roles_users (user_id, role_id) VALUES (1, 1);
+INSERT INTO roles_users (user_id, role_id) VALUES (2, 2);
+
 INSERT INTO types(id_types, name) VALUES(DEFAULT, "Foods");
 INSERT INTO types(id_types, name) VALUES(DEFAULT, "Culture");
 INSERT INTO types(id_types, name) VALUES(DEFAULT, "Sports");
@@ -9,3 +19,4 @@ INSERT INTO event(id_event, name, capacity, price, description, ubication, time,
 INSERT INTO event(id_event, name, capacity, price, description, ubication, time, date, types_id) VALUES(DEFAULT, "Hanami (花見)", 100000, 0, "El Hanami (はなみ, contemplación de flores), también llamado festival de los cerezos en flor, se celebra en abril, mes en el que se suceden diversos festivales florares en los altares sintoístas.", "Japon", "00:00", "Abril", 4);
 INSERT INTO event(id_event, name, capacity, price, description, ubication, time, date, types_id) VALUES(DEFAULT, "Competencia de Sumo", 10000, 1200, "Si piensas en el deporte de Japón, probablemente te imaginarás el sumo. Pero no olvides aprovechar la oportunidad para conocer algunos de los otros deportes tradicionales del país, así como los importados de occidente.", "Ryogoku Kokugikan de Tokio", "10:00", "Enero, Mayo y Septiembre", 3);
 INSERT INTO event(id_event, name, capacity, price, description, ubication, time, date, types_id) VALUES(DEFAULT, "Kendo", 10000, 100, "Kendo, el esgrima con un toque japonés, proviene del kenjutsu o esgrima, el importante arte marcial del samurái.", "Ryogoku Kokugikan de Tokio", "10:00", "Verano", 3);
+
