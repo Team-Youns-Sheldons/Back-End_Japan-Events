@@ -1,7 +1,5 @@
 package com.gulag.JapanEvents.models;
 
-import java.util.Base64;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,9 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
@@ -43,15 +39,7 @@ public class Event {
     @JoinColumn(name = "types_id", referencedColumnName = "id_types")
     private TypesEvent typeEvent;
 
-    private String Base64imageData;
-
-    @Transient
-    private byte[] imageData;
-
-    @PrePersist
-    protected void onCreate(){
-        this.imageData = Base64.getDecoder().decode(this.Base64imageData);
-    }
+    private String imagePath;
 
     public Event() {
     }
@@ -128,21 +116,13 @@ public class Event {
         this.typeEvent = typeEvent;
     }
 
-    public String getBase64imageData() {
-        return Base64imageData;
+    public String getImagePath() {
+        return imagePath;
     }
 
-    public void setBase64imageData(String base64imageData) {
-        Base64imageData = base64imageData;
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
-
-    public byte[] getImageData() {
-        return imageData;
-    }
-
-    public void setImageData(byte[] imageData) {
-        this.imageData = imageData;
-    }    
 
     
 
