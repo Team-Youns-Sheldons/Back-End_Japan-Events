@@ -7,7 +7,7 @@ INSERT INTO users (id_user, username, password) VALUES (default, 'nicolasito', '
 
 INSERT INTO roles_users (user_id, role_id) VALUES (1, 1);
 INSERT INTO roles_users (user_id, role_id) VALUES (2, 2);
-=======
+
 INSERT INTO types(id_types, name) VALUES(DEFAULT, "Foods");
 INSERT INTO types(id_types, name) VALUES(DEFAULT, "Culture");
 INSERT INTO types(id_types, name) VALUES(DEFAULT, "Sports");
