@@ -34,11 +34,14 @@ public class Event {
     private String time;
 
     private String date;
+
+    private String image;
     
     @ManyToOne
     @JoinColumn(name = "types_id", referencedColumnName = "id_types")
     private TypesEvent typeEvent;
 
+    private String imagePath;
 
     public Event() {
     }
@@ -113,6 +116,24 @@ public class Event {
 
     public void setTypeEvent(TypesEvent typeEvent) {
         this.typeEvent = typeEvent;
-    }    
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    
 
 }
