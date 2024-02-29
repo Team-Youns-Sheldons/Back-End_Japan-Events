@@ -12,23 +12,21 @@ The project was developed entirely from scratch by our development team, and the
 ## Screenshots
 
 Login 
+![image](https://github.com/GitNinja0/Front-End_Japan-Events/assets/146742892/1ace65e5-7b04-4d80-9383-82882711f825)
+![image](https://github.com/GitNinja0/Front-End_Japan-Events/assets/146742892/45634b16-bee4-441a-848b-7c8148419643)
 
 LandingPage
+![image](https://github.com/GitNinja0/Front-End_Japan-Events/assets/146742892/8d608c64-d925-4ff9-8f8c-f0e63f03f769)
+![image](https://github.com/GitNinja0/Front-End_Japan-Events/assets/146742892/1037bb61-ae37-4089-a3f2-ecfd000e7d22)
+![image](https://github.com/GitNinja0/Front-End_Japan-Events/assets/146742892/c014025a-23b2-4765-b9c5-2d2ae3d9d2c4)
 
-Events 
+Event Page 
+![image](https://github.com/GitNinja0/Front-End_Japan-Events/assets/146742892/ae4535cc-5e93-47ba-bfc1-a5bb82f0cd2c)
+![image](https://github.com/GitNinja0/Front-End_Japan-Events/assets/146742892/a5d1db78-be8e-4944-b2dd-030d9e047799)
+![image](https://github.com/GitNinja0/Front-End_Japan-Events/assets/146742892/d9c60cf4-5d69-45ec-9a3e-c7d61c9f14fe)
 
 
 ## Tecnologies Used
-
-### Front-End
-
-Vue 3: Framework for building user interfaces.
-
-JavaScript: Programming language for client-side scripting.
-
-Sass: Stylesheet language to enhance the design and structure of the project.
-
-### Back-End
 
 ### Frontend
 
@@ -50,7 +48,7 @@ Sass: Stylesheet language to enhance the design and structure of the project.
 - Add more integrations
 
 
-## Run Locally Front-End
+## Run Locally
 
 Clone the project
 
@@ -94,7 +92,7 @@ Start Container Docker
 ```bash
   docker run --name japan-events_db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0-debian
 ```
-And create Schema SQL japan-events_db
+And create Schema MYSQL japan-events_db
 
 
 
